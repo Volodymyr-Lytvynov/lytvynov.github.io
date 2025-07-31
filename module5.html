@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5: Tools for a Strong Job Search</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alice&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    /* Universal Lesson Styles */
+    .lesson {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+      border: 1px solid #f2f2f2;
+      border-radius: 16px;
+      padding: 44px 32px 36px 32px;
+      margin: 32px 0;
+      box-shadow: 0 4px 24px rgba(34, 113, 30, 0.06);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lesson-title {
+      font-family: 'Alice', serif;
+      color: #22711e;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 0;
+      ;
+    }
+
+    .lesson-title::before {
+      content: '\1F4D6';
+      font-size: 1.3em;
+      line-height: 1;
+      color: #22711e;
+      margin-top: 9px;
+      margin-bottom: auto;
+    }
+
+    .lesson-highlights {
+      margin-bottom: 24px;
+    }
+
+    .lesson-highlights p {
+      margin: 0;
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    /* .lesson-section {
+            background: #ffffff;
+            border: 2px solid #e6eae6;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 24px 0;
+            box-shadow: 0 4px 16px rgba(34, 113, 30, 0.08);
+        } */
+
+    .lesson-section>p {
+      margin-bottom: 0;
+      background: #fafbfa;
+      border-left: 3px solid #22711e;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #333;
+      font-style: italic;
+    }
+
+    .lesson-section-title {
+      font-family: 'Alice', serif;
+      color: #22711e;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lesson-section-title::before {
+      content: '\1F4CB';
+      font-size: 1.1em;
+      color: #22711e;
+    }
+
+    .lesson-deep-dive {
+      background: #f0f7f0;
+      border: 1px solid #d4e6d4;
+      border-radius: 10px;
+      padding: 22px 20px;
+      margin: 16px 0;
+      box-shadow: 0 2px 8px rgba(34, 113, 30, 0.05);
+    }
+
+    .lesson-deep-dive h3 {
+      font-family: 'Alice', serif;
+      color: #22711e;
+      font-size: 1.18rem;
+      font-weight: 400;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0;
+    }
+
+    .lesson ul {
+      margin: 12px 0 0 0;
+      padding-left: 22px;
+    }
+
+    .lesson li {
+      margin: 8px 0;
+      font-size: 1.04rem;
+    }
+
+    /* Module Overview Specific Styles */
+    .lesson-mod5-overview {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+      border-radius: 18px;
+      margin: 32px 0;
+      padding: 48px 32px 40px 32px;
+      box-shadow: 0 6px 32px rgba(34, 113, 30, 0.07);
+      border: 1px solid #f2f2f2;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lesson-mod5-overview-header {
+      text-align: center;
+      color: #22711e;
+      margin-bottom: 36px;
+    }
+
+    .lesson-mod5-overview-title {
+      font-family: 'Alice', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .lesson-mod5-overview-subtitle {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.15rem;
+      opacity: 0.85;
+      margin-bottom: 0;
+    }
+
+    .lesson-mod5-overview-content {
+      background: #fafbfa;
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 12px rgba(34, 113, 30, 0.04);
+    }
+
+    .lesson-mod5-overview-description {
+      font-size: 1.13rem;
+      color: #444;
+      margin-bottom: 28px;
+    }
+
+    .lesson-mod5-overview-highlights {
+      background: #f5f9f5;
+      border-left: 4px solid #22711e;
+      padding: 24px 24px 18px 24px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .lesson-mod5-overview-highlights h3 {
+      font-family: 'Alice', serif;
+      color: #22711e;
+      margin-bottom: 18px;
+      font-size: 1.25rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lesson-mod5-overview-highlights h3::before {
+      content: '\1F4D6';
+      font-size: 1.2em;
+      color: #22711e;
+    }
+
+    .lesson-mod5-overview-highlights ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .lesson-mod5-overview-highlights li {
+      margin: 10px 0;
+      color: #333;
+      font-size: 1.05rem;
+    }
+
+    /* Module Completion Styles */
+    .module5-completion {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.7;
+      color: #fff;
+      background: linear-gradient(135deg, #22711e 0%, #1a5717 100%);
+      border-radius: 24px;
+      padding: 64px 48px 56px 48px;
+      margin: 48px 0;
+      box-shadow: 0 12px 48px rgba(34, 113, 30, 0.2);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .module5-completion-title {
+      font-family: 'Alice', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      line-height: 1.1;
+    }
+
+    .module5-completion-message {
+      font-size: 1.3rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    .module5-completion-stats {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+    }
+
+    .module5-completion-stats h3 {
+      font-family: 'Alice', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .module5-completion-stats .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .module5-completion-stats .stat-item {
+      text-align: center;
+    }
+
+    .module5-completion-stats .stat-number {
+      font-family: 'Alice', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #fff;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .module5-completion-stats .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    /* Lesson Image Styles */
+    .lesson-image img {
+      width: 100%;      
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(34, 113, 30, 0.1);
+      margin: 24px auto;
+      display: block;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .lesson {
+        padding: 0 !important;
+      }
+
+      .lesson-title {
+        font-size: 1.5rem;
+        gap: 6px;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding: 10px 4vw 0 4vw;
+      }
+
+      .lesson-title::before {
+        content: '\1F4D6';
+        font-size: 1em;
+      }
+
+      .lesson-highlights {
+        padding: 10px 4vw;
+      }
+
+      .lesson-section {
+        padding: 12px 4vw;
+        margin: 14px 0;
+      }
+
+      .lesson-section-title {
+        font-size: 1rem;
+        gap: 5px;
+      }
+
+      .lesson-section-title::before {
+        font-size: 0.95em;
+      }
+
+      .lesson-deep-dive {
+        padding: 8px 2vw;
+      }
+
+      .lesson li {
+        font-size: 0.97rem;
+      }
+
+      .lesson-mod5-overview {
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .lesson-mod5-overview-title {
+        font-size: 1.35rem;
+        line-height: 1.2;
+      }
+
+      .lesson-mod5-overview-header {
+        margin-bottom: 18px;
+      }
+
+      .lesson-mod5-overview-content {
+        padding: 16px 4vw;
+      }
+
+      .lesson-mod5-overview-highlights {
+        padding: 12px 4vw;
+      }
+
+      .module5-completion {
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      .module5-completion-title {
+        font-size: 1.4rem;
+        gap: 16px;
+        line-height: 1.08;
+      }
+
+      .module5-completion-message {
+        font-size: 1.1rem;
+      }
+
+      .module5-completion-stats {
+        padding: 16px 4vw;
+      }
+
+      .module5-completion-stats h3 {
+        font-size: 1.15rem;
+      }
+
+      .module5-completion-stats .stat-number {
+        font-size: 1.6rem;
+      }
+
+      .module5-completion-stats .stat-label {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+
+  <!-- Module 5 Overview -->
+  <div class="lesson-mod5-overview">
+    <div class="lesson-mod5-overview-header">
+      <h1 class="lesson-mod5-overview-title">Module 5: Tools for a Strong Job Search</h1>
+      <p class="lesson-mod5-overview-subtitle">Taking Confident Steps into the Corporate Job Market</p>
+    </div>
+    
+    <div class="lesson-mod5-overview-content">
+      <div class="lesson-mod5-overview-description">
+        <p>This chapter is designed to help you take a confident first step into the corporate job market. You'll gain practical tips and proven best practices for building a strong resume, optimizing your LinkedIn profile, and expanding your network. Whether you're just starting or refining your current approach, this section offers tools to help you stand out in a competitive landscape. We'll also explore how AI can support your job search and share strategies for tracking and following up on applications-so you stay organized, proactive, and prepared.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 1: Resume Building Best Practices -->
+  <div class="lesson">
+    <h2 class="lesson-title">Resume Building Best Practices</h2>
+
+    <div class="lesson-highlights">
+      <p>Your resume is often the first impression a hiring manager will have of you, and it's crucial to make it count. In this section, you'll learn how to create a standout resume that highlights your skills and experience in a way that grabs attention. You will also understand how to tailor your resume to specific roles and utilize AI tools to optimize it for Applicant Tracking Systems (ATS).</p>
+    </div>
+
+    <div class="lesson-section">
+      <div class="lesson-deep-dive">
+        <h3>Key Concepts</h3>
+        <ul>
+          <li><strong>Resume Structure & Essential Components:</strong> A well-organized resume includes essential sections such as contact information, a career summary, experience, skills, and education.</li>
+          <li><strong>Formatting for Readability:</strong> Choose a clean, simple format with plenty of white space and bullet points to make it easy for hiring managers to scan.</li>
+          <li><strong>Tailoring for Specific Job Descriptions:</strong> Customizing your resume for each role is critical. Focus on highlighting the skills and experience that match the specific job description.</li>
+          <li><strong>AI-Powered Tools for Refinement:</strong> AI tools can help enhance your resume content and format it for optimal ATS compatibility.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 2: Leveraging LinkedIn for Job Search Success -->
+  <div class="lesson">
+    <h2 class="lesson-title">Leveraging LinkedIn for Job Search Success</h2>
+
+    <div class="lesson-highlights">
+      <p>LinkedIn is a powerful tool in your job search strategy. This section teaches you how to optimize your LinkedIn profile, build a robust professional network, and leverage platform features to apply for jobs and connect with hiring managers.</p>
+    </div>
+
+    <div class="lesson-section">
+      <div class="lesson-deep-dive">
+        <h3>Key Concepts</h3>
+        <ul>
+          <li><strong>Optimizing Your Profile:</strong> Ensure your LinkedIn headline, summary, skills, and endorsements are all aligned to your career goals.</li>
+          <li><strong>Expanding Your Network:</strong> Connect with colleagues, industry professionals, and recruiters to increase your visibility.</li>
+          <li><strong>Effective Job Searching on LinkedIn:</strong> Use LinkedIn's job search tools to apply directly, and personalize your job applications to stand out.</li>
+          <li><strong>Engaging with Content:</strong> Sharing industry-related content or engaging with posts can help showcase your expertise and attract recruiters.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 3: Networking Best Practices -->
+  <div class="lesson">
+    <h2 class="lesson-title">Networking Best Practices</h2>
+
+    <div class="lesson-highlights">
+      <p>Networking is an essential part of the job search process. This section will teach you how to identify key connections, make lasting impressions, and use both in-person and online networking strategies to enhance your job search.</p>
+    </div>
+
+    <div class="lesson-section">
+      <div class="lesson-deep-dive">
+        <h3>Key Concepts</h3>
+        <ul>
+          <li><strong>Building a Networking Strategy:</strong> Identify potential contacts within your target companies or industries, and map out your networking efforts.</li>
+          <li><strong>Approaching Connections:</strong> Be confident but professional when reaching out to potential connections. Networking should be about mutual benefit.</li>
+          <li><strong>Using Online Platforms:</strong> LinkedIn is a powerful tool for networking, but industry-specific platforms and events can also provide great networking opportunities.</li>
+          <li><strong>Follow-Up Techniques:</strong> After networking interactions, follow up with meaningful, personalized messages to nurture relationships.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 4: How to Prepare for Interviews: Five Essential Steps -->
+  <div class="lesson">
+    <h2 class="lesson-title">How to Prepare for Interviews: Five Essential Steps</h2>
+
+    <div class="lesson-highlights">
+      <p>Preparation is the cornerstone of interview success. This comprehensive guide covers five essential steps to help you excel in interviews and make a lasting impression on potential employers.</p>
+    </div>
+
+    <div class="lesson-section">
+      <div class="lesson-deep-dive">
+        <h3>Understand the Company and the Role</h3>
+        <p>Preparation begins with thorough research. Familiarize yourself with the company's mission, values, products, services, and recent achievements. Dive into the specifics of the role by reviewing the job description to identify key responsibilities and required skills. Take it a step further by understanding the industry landscape, key competitors, and market trends. This knowledge not only demonstrates genuine interest but also equips you to align your answers with the company's objectives and needs.</p>
+      </div>
+
+      <div class="lesson-deep-dive">
+        <h3>Master Common and Behavioral Questions</h3>
+        <p>Practice is the cornerstone of interview success. Prepare answers to frequently asked questions, such as:</p>
+        <ul>
+          <li>"Can you tell me about yourself?"</li>
+          <li>"Why are you interested in this position?"</li>
+          <li>"What are your strengths and weaknesses?"</li>
+        </ul>
+        <p>For behavioral questions, use the STAR Method (Situation, Task, Action, Result) to structure clear and concise responses. For example:</p>
+        <ul>
+          <li><strong>Question:</strong> "Tell me about a time you handled a challenging project."</li>
+          <li><strong>Response:</strong> "In my previous role, I [Situation]. My task was to [Task]. To address this, I [Action], which resulted in [Result]."</li>
+        </ul>
+      </div>
+
+      <div class="lesson-deep-dive">
+        <h3>Prepare Questions to Engage the Interviewer</h3>
+        <p>Interviews are a two-way street. Asking thoughtful questions not only shows interest but also helps you assess if the company is the right fit for you.</p>
+        <p>Consider questions like:</p>
+        <ul>
+          <li>"What are the immediate priorities for this role?"</li>
+          <li>"How does the company support professional growth?"</li>
+          <li>"What challenges is the team currently facing?"</li>
+        </ul>
+        <p>Tailor your questions based on your research and the conversation during the interview.</p>
+      </div>
+
+      <div class="lesson-deep-dive">
+        <h3>Polish Your Professionalism and Presentation</h3>
+        <p>Whether in-person or virtual, first impressions matter.</p>
+        <ul>
+          <li>Dress appropriately for the company culture-business formal for traditional industries and business casual for modern workplaces.</li>
+          <li>For virtual interviews, ensure a distraction-free environment, test your technology in advance, and position yourself in a well-lit area with a neutral background.</li>
+        </ul>
+        <p>During the interview, maintain good posture, make appropriate eye contact (look at the camera for virtual settings), and listen actively. Answer questions with clarity, confidence, and a calm demeanor.</p>
+      </div>
+
+      <div class="lesson-deep-dive">
+        <h3>Follow Up Strategically</h3>
+        <p>post-interview follow-up is a critical yet often overlooked step. Send a personalized thank-you email within 24 hours of the interview. Express gratitude, reiterate your interest in the position, and reference a specific part of the conversation to show attentiveness. For example:</p>
+        <ul>
+          <li>"Thank you for sharing insights about the team's upcoming project. I'm particularly excited about contributing to [specific aspect discussed]."</li>
+        </ul>
+        <p>If you haven't heard back within the stated timeline, send a polite follow-up email to check on the status of your application.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 5 Completion Section -->
+  <div class="module5-completion">
+    <h1 class="module5-completion-title">WRAP UP</h1>
+
+    <p class="module5-completion-message">
+      The job search process doesn't have to be daunting. With the right tools, a clear strategy, and consistent effort, you can take meaningful steps toward your corporate goals. By refining your resume, strengthening your LinkedIn profile, building your network, and staying organized, you're setting yourself up for success. Remember, every action you take brings you closer to the right opportunity.
+    </p>
+
+    <div class="module5-completion-stats">
+      <h3>Module Summary</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Chapters</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Key Concepts</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Complete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
